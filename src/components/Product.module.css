@@ -1,0 +1,13 @@
+.main {
+  position: relative;
+}
+
+@media (min-width: 720px) {
+  main {
+    display: flex;
+    justify-content: center;
+    align-items: start;
+    margin-top: 5rem;
+    padding: 0 2rem;
+  }
+}

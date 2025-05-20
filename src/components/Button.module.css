@@ -1,0 +1,17 @@
+.cartBtn {
+  background-color: hsl(26, 100%, 55%);
+  margin-top: 1.5rem;
+  font-size: 1rem;
+  font-weight: 600;
+  border-radius: 0.5rem;
+  border-style: none;
+  width: 100%;
+  height: 3.5rem;
+}
+
+@media (min-width: 720px) {
+  .cartBtn {
+    margin-top: 1rem;
+    /* width: 57.5%; */
+  }
+}

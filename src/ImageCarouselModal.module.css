@@ -1,0 +1,75 @@
+.wrapper {
+  display: none;
+}
+
+@media (min-width: 720px) {
+  .wrapper {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    background-color: rgba(0, 0, 0, 0.75);
+    backdrop-filter: blur(3px);
+    width: 100vw;
+    height: 100vh;
+    margin: auto;
+    position: fixed;
+    top: 0;
+    left: 0;
+  }
+
+  .productImage {
+    width: 30%;
+    border-radius: 1rem;
+  }
+
+  .thumbnailContainer {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 35%;
+    margin: 2rem auto;
+  }
+
+  .thumbnail {
+    width: 18%;
+    margin: auto;
+    border-radius: 0.5rem;
+    overflow: hidden;
+  }
+
+  .selected {
+    opacity: 60%;
+    border: 3px solid hsl(26, 100%, 55%);
+  }
+
+  .thumbnailImage {
+    width: 100%;
+    object-fit: cover;
+  }
+
+  .closeIcon {
+    width: 1.6%;
+    position: absolute;
+    top: 6%;
+    right: 35%;
+  }
+
+  .btn {
+    background-color: hsl(223, 64%, 98%);
+    border: 15px solid hsl(223, 64%, 98%);
+    border-radius: 100%;
+    height: 3rem;
+    width: 3rem;
+    position: absolute;
+    top: 40%;
+  }
+
+  .previous {
+    left: 33%;
+  }
+
+  .next {
+    right: 33%;
+  }
+}
