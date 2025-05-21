@@ -22,6 +22,10 @@ nav {
   position: relative;
 }
 
+.cartSection :hover {
+  cursor: pointer;
+}
+
 ul {
   display: none;
   color: hsl(219, 9%, 45%);
@@ -39,7 +43,13 @@ ul {
 }
 
 .avatar {
-  width: 2.5rem;
+  width: 2.6rem;
+}
+
+.avatar:hover {
+  cursor: pointer;
+  border: 2px solid hsl(26, 100%, 55%);
+  border-radius: 100%;
 }
 
 @media (min-width: 720px) {
@@ -48,15 +58,15 @@ ul {
     border-width: 0 0 0.2px;
   }
 
-  nav .logoSection .menuIcon {
+  .menuIcon {
     display: none;
   }
 
-  nav .logoSection {
+  .logoSection {
     width: 10rem;
   }
 
-  nav .cartSection {
+  .cartSection {
     width: 6rem;
   }
 
@@ -70,9 +80,10 @@ ul {
 
   nav ul li {
     padding-left: 0.5rem;
+    margin: 2px;
   }
 
-  nav ul li {
-    margin: 2px;
+  li:hover {
+    cursor: pointer;
   }
 }

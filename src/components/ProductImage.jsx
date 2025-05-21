@@ -18,20 +18,27 @@ function ProductImage({ styles, onClick }) {
   const [imageIndex, setImageIndex] = useState(0);
 
   return (
-    <div className={styles.wrapper}>
-      <img
-        className={styles.closeIcon}
-        onClick={onClick}
-        src={closeIcon}
-        alt="closeIcon"
-      />
-      <img
-        className={styles.productImage}
-        onClick={onClick}
-        src={images[imageIndex]}
-        alt="image_product_one"
-      />
-      <div>
+    <div className={styles.wrapper} onClick={onClick}>
+      <div className={styles.imageContainer}>
+        <img
+          className={styles.closeIcon}
+          onClick={onClick}
+          src={closeIcon}
+          alt="closeIcon"
+        />
+        <img
+          className={styles.productImage}
+          onClick={onClick}
+          src={images[imageIndex]}
+          alt="image_product_one"
+        />
+      </div>
+
+      <div
+        onClick={(e) => {
+          e.stopPropagation();
+        }}
+      >
         <button
           className={`${styles.previous} ${styles.btn}`}
           onClick={() => {
@@ -56,7 +63,12 @@ function ProductImage({ styles, onClick }) {
           </span>
         </button>
       </div>
-      <div className={styles.thumbnailContainer}>
+      <div
+        className={styles.thumbnailContainer}
+        onClick={(e) => {
+          e.stopPropagation();
+        }}
+      >
         {thumbnailImages.map((thumbnail, index) => (
           <div
             className={`${styles.thumbnail} ${

@@ -9,6 +9,10 @@
   height: 3.5rem;
 }
 
+.cartBtn:hover {
+  cursor: pointer;
+}
+
 @media (min-width: 720px) {
   .cartBtn {
     margin-top: 1rem;

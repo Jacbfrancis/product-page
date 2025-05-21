@@ -21,6 +21,10 @@
   border-style: none;
 }
 
+.btn:hover {
+  cursor: pointer;
+}
+
 span {
   /* margin-right: 1rem; */
   width: 100%;
