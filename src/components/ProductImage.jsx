@@ -1,4 +1,5 @@
 import { useState } from "react";
+import { motion, AnimatePresence } from "motion/react";
 
 import imageProduct1 from "../assets/images/image-product-1.jpg";
 import imageProduct2 from "../assets/images/image-product-2.jpg";
@@ -26,12 +27,19 @@ function ProductImage({ styles, onClick }) {
           src={closeIcon}
           alt="closeIcon"
         />
-        <img
-          className={styles.productImage}
-          onClick={onClick}
-          src={images[imageIndex]}
-          alt="image_product_one"
-        />
+
+        <AnimatePresence mode="wait">
+          <motion.img
+            key={imageIndex}
+            initial={{ x: 200, opacity: 0 }}
+            animate={{ x: 0, opacity: 1 }}
+            exit={{ x: -300, opacity: 0 }}
+            transition={{ duration: 0.35 }}
+            className={styles.productImage}
+            src={images[imageIndex]}
+            alt="image_product_one"
+          />
+        </AnimatePresence>
       </div>
 
       <div

@@ -1,4 +1,5 @@
 import Button from "./Button";
+import { motion } from "motion/react";
 
 import thumbnail from "../assets/images/image-product-1-thumbnail.jpg";
 import trashIcon from "../assets/images/icon-delete.svg";
@@ -11,7 +12,11 @@ function CartItem({ quantity, setQuantity, setIsCartOpen }) {
   }
 
   return (
-    <section>
+    <motion.section
+      initial={{ y: -30 }}
+      animate={{ y: 0 }}
+      transition={{ duration: 0.5 }}
+    >
       <div className={styles.header}>
         <h5>Cart</h5>
       </div>
@@ -45,7 +50,7 @@ function CartItem({ quantity, setQuantity, setIsCartOpen }) {
       ) : (
         <p className={styles.empty}>Your cart is empty.</p>
       )}
-    </section>
+    </motion.section>
   );
 }
 
