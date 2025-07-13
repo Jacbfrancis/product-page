@@ -34,7 +34,7 @@ function ProductImage({ styles, onClick }) {
             initial={{ x: 200, opacity: 0 }}
             animate={{ x: 0, opacity: 1 }}
             exit={{ x: -300, opacity: 0 }}
-            transition={{ duration: 0.35 }}
+            transition={{ duration: 0.3 }}
             className={styles.productImage}
             src={images[imageIndex]}
             alt="image_product_one"
