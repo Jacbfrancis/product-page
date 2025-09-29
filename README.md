@@ -31,7 +31,7 @@ Users should be able to:
 
 ### Links
 
-- Live Site URL: [Add live site URL here](https://product-page-frontend.netlify.app)
+- 🔗 View Live Project: [Demo](https://product-page-frontend.netlify.app)
 
 ## My process
 
